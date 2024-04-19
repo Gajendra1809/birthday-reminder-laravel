@@ -213,6 +213,7 @@
 
 
         //Pop form to add bithday
+        openform();
         function openform() {
             var form = document.getElementById("birthdayForm");
             if (form.style.display === "none") {

@@ -168,6 +168,7 @@
 
     <script>
         //popup functionality
+        openform();
         function openform() {
             var form = document.getElementById("registrationForm");
             if (form.style.display === "none") {
