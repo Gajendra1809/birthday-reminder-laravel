@@ -62,6 +62,9 @@
         <h5 class="popup-container2">
             {{ session('error') }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
     @endif
+    @if($errors->has('phone'))
+    <h5 class="popup-container2">Wrong phone formate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+    @endif
 
     <!-- Popup form to add birthdays -->
     <div class="popup-container" id="birthdayForm">
@@ -73,6 +76,9 @@
             <input type="date" id="date" name="date" required>
             <label for="phone">Phone:</label>
             <input type="text" id="phone" name="phone" required>
+            @if($errors->has('phone'))
+                <span class="text-danger">{{ $errors->first('phone') }}</span>
+            @endif
             <div style="display:flex;gap: 3px">
                 <button type="submit" style="background-color: green;">Submit</button>
                 <button onclick="openform()" style="background-color: red;">Cancel</button>

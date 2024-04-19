@@ -134,16 +134,12 @@
                                             Notification frequency
                                         </label>
                                         <input type="number" name="frequency" class="form-control" id="frequency" />
-                                        @if($errors->has('password'))
-                                            <span
-                                                class="text-danger">{{ $errors->first('password') }}</span>
-                                        @endif
                                     </div>
                                     <div class="form-group">
                                         <label for="Phone">
                                             Phone
                                         </label>
-                                        <input type="text" name="phone" class="form-control" id="phone"
+                                        <input type="phone" name="phone" class="form-control" id="phone"
                                             placeholder="Phone" required
                                             />
                                         @if($errors->has('phone'))

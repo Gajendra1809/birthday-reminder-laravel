@@ -45,6 +45,7 @@ class DateController extends Controller
         $request->validate([
             "name"=>"required",
             "date"=>"required",
+            "phone"=>"min:10|numeric",
         ]);
         $data=new Birthday();
         $data->useremail=$request->session()->get('uid')->email;
